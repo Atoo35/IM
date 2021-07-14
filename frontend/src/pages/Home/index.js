@@ -22,7 +22,7 @@ export default function Home({ history }) {
             history.push('/login')
     })
     const socket = useMemo(() =>
-        socketio.connect("http://192.168.1.4:8000/", { query: { user: user_id } })
+        socketio.connect("http://<YOUR_IP>:8000/", { query: { user: user_id } })
         , [user_id])
 
     useEffect(() => {
